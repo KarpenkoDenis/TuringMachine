@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo -e $YELLOW"python3-pip..."$ENDCOLOR
+apt install python3-pip
+
+echo -e $YELLOW"pip colorama..."$ENDCOLOR
+pip3 install colorama
