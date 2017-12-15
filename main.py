@@ -17,13 +17,14 @@ def check(input_str):
         Rule(Q(1),',',Q(2),'#', Move.Right),
         Rule(Q(2),' ',Q(2),'#', Move.Right),
         Rule(Q(2),'#',Q(2),'#', Move.Left),
+            Rule(Q(2),'*',Q(6),'*', Move.Left),
         Rule(Q(2),'1',Q(3),'#', Move.Left),     # операции со строками
         Rule(Q(3),'#',Q(3),'#', Move.Left),  
-        Rule(Q(3),'1',Q(4),'0', Move.Right), #встретили единичку, значит вычитаем его
+        Rule(Q(3),'1',Q(4),'0', Move.Right), #встретили единичку, значит вычитаем её
         Rule(Q(3),'0',Q(3),'1', Move.Left),  #встретили нолик, значит добавляем единичку и идём вычитать единичку у след порядка
         Rule(Q(4),'0',Q(4),'0', Move.Right), # идём вправо, чтобы найти разделитель
         Rule(Q(4),'1',Q(4),'1', Move.Right),
-        Rule(Q(4),'#',Q(5),'#', Move.Right), # идём вправо, чтобы найти удиничку
+        Rule(Q(4),'#',Q(5),'#', Move.Right), # идём вправо, чтобы найти единичку
         Rule(Q(5),'#',Q(5),'#', Move.Right),
         Rule(Q(5),'1',Q(3),'#', Move.Left),
         Rule(Q(5),empty,Q(6),empty, Move.Left),
